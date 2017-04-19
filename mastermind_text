@@ -1,0 +1,47 @@
+  /* checks if number is present in
+  the secret code */
+  
+  static boolean isNumberIn(int number) {
+    int i;
+    for(i=0; i<4; i++) {
+      if(number==CODE[i])
+        return(true);
+    }
+    return(false);
+  }
+  
+  /* checks if number is in the right
+  place in the code */
+  
+  static boolean inRightPlace(int number, int position) {
+    return(number==CODE[position]);
+  }
+  
+  /* determines scoring for user's guess */
+  
+  static int[] score(int guess[]) {
+    int i, int[2] peg;
+    for(i=0;i<4;i++) {
+      if(isNumberIn(guess[i])) {
+        if(inRightPlace(guess[i], i))
+          peg[0]++;     // white 
+        else peg[1]++;  // black 
+      }
+    }
+    return(peg);
+  }
+  
+  /* create random CODE */
+  static int[] newCode() {
+  
+  }
+  
+  /* take user's guess */
+  static int[] newTurn() {
+  
+  }
+  
+  /* Main Game Subroutine */
+  public static void main(String[] args) {
+  
+  }
